@@ -23,16 +23,17 @@ export default {
 @import "../style/variables.scss";
 
 .ms-jumbo {
-    height: 100vh;
+    height: 90vh;
     background-image: url(../assets/img/home1_slide_three_bg_2.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: auto;
     position: relative;
 
     .ms-jumbotext {
         position: absolute;
         top: 50%;
-        left: 45%;
+        left: 50%;
         transform: translate(-50%,-50%);
         color: #ffffff;
         h1 {
