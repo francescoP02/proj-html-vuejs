@@ -6,7 +6,7 @@
         <span class="align-self-center"></span>
       </div>
       <span>Must have products from our top sellers</span>
-      <ul class="ms-featuredmenu">
+      <ul class="ms-featuredmenu my-4">
           <li v-for="(item, index) in featuredMenu" :key="index" @click="clickedItem(index)" :class="{active : index === currentItem}"> {{item.name}}</li>
       </ul>
 
