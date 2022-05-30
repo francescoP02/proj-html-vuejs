@@ -2,12 +2,12 @@
   <div>
       <section class="ms-h-top d-flex">
         <div>
-          <ul class="ms-social">
-            <li class="align-self-center" v-for="(item, index) in iconSocial" :key="index"><i class="fab" :class="item.icon"></i></li>
+          <ul class="ms-social d-flex">
+            <li class="align-items-center" v-for="(item, index) in iconSocial" :key="index"><i class="fab" :class="item.icon"></i></li>
           </ul>
         </div>
         <div>
-          <ul class="ms-menubars">
+          <ul class="ms-menubar">
             <li v-for="(item, index) in menuBar" :key="index" @click="clickedItem(index)" :class="{active : index === currentItem}"> {{item.name}} </li>
           </ul>
         </div>
@@ -79,24 +79,32 @@ ul {
 
 li {
   display: inline-block;
-  padding: .5rem;
+  padding: 0 .5rem;
 }
 
 .ms-h-top {
+  height: 60px;
   justify-content: space-around;
   border-bottom: 3px solid #fafafa;
 
   .ms-social {
     align-items: center;
+    height: 100%;
     li {
       margin-left: .5rem;
+      cursor: pointer;
     }
   }
 
   .ms-menubar {
 
+    height: 100%;
+
     li {
       border-right: 2px solid #f1f1f1;
+      height: 100%;
+      line-height: 60px;
+      cursor: pointer;
     }
 
     .active {
