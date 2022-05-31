@@ -117,7 +117,8 @@ li {
         li {
             background-color: #f1f1f1;
             padding: 1rem 3rem;
-            border: 1px solid #f1f1f1
+            border: 1px solid #f1f1f1;
+            cursor: pointer;
         }
         .active{
         background-color: white;
