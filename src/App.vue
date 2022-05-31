@@ -10,6 +10,7 @@
       <AppCollection />
       <BestSeller />
       <AppPromo />
+      <NewArrivals />
       <AppMain />
     </main>
 
@@ -26,8 +27,10 @@ import FeaturedProducts from './components/FeaturedProducts.vue'
 import AppCollection from './components/AppCollection.vue'
 import BestSeller from './components/BestSeller.vue'
 import AppPromo from './components/AppPromo.vue'
+import NewArrivals from './components/NewArrivals.vue'
 import AppMain from './components/AppMain.vue'
 import AppFooter from './components/AppFooter.vue'
+
 
 
 
@@ -43,6 +46,7 @@ export default {
     AppCollection,
     BestSeller,
     AppPromo,
+    NewArrivals,
     AppMain,
     AppFooter,
 }

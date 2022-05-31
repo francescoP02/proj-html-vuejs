@@ -1,5 +1,5 @@
 <template>
-  <div class="ms-collection d-flex row row-cols-3">
+  <div class="ms-collection d-flex row-cols-3">
     <div class="ms-card" v-for="(item, index) in collectionCard" :key="index">
         <img :src="require(`../assets/img/${item.img}`)" alt="">
         <div class="ms-text-card">
@@ -46,6 +46,7 @@ export default {
 .ms-collection {
 
     margin-top: 10rem;
+    margin: 0;
 
     .ms-card {
         padding: 0;

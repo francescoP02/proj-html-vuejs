@@ -1,17 +1,17 @@
 <template>
-  <div class="container">
+  <div>
       <div class="ms-title d-flex">
         <span class="align-self-center"></span>
-        <h2>Best Seller</h2>
+        <h2>New Arrivals</h2>
         <span class="align-self-center"></span>
       </div>
-      <span>Must have products from our top sellers</span>
+      <span>Brand new products from top designers</span>
 
-      <ul class="d-flex ms-bestseller">
+      <ul class="d-flex ms-arrivals">
           <li><span><i class="fas fa-angle-left"></i></span></li>
           <li>
             <ul class="d-flex row row-cols-5">
-                <li v-for="(item, index) in bestSeller" :key="index">
+                <li v-for="(item, index) in newArrivals" :key="index">
                     <ul class="ms-card d-flex">
                         <li><img :src="require(`../assets/img/${item.img}`)" alt=""></li>
                     </ul>
@@ -27,24 +27,24 @@
 <script>
 
 export default {
-  name: 'BestSeller',
+  name: 'NewArrivals',
   data: function() {
       return {
-          bestSeller: [
-                {
-                  img: "spring_printed_dress.jpg",
-                },
-                {
-                  img: "modern_love_tee.jpg",
-                },
-                {
-                  img: "black_leather_jacket.jpg",
-                },
+          newArrivals: [
                 {
                   img: "black_elegant_leather_jacket.jpg",
                 },
                 {
                   img: "hipster_black_top.jpg",
+                },
+                {
+                  img: "black_leather_suit.jpg",
+                },
+                {
+                  img: "spring_printed_dress.jpg",
+                },
+                {
+                  img: "modern_love_tee.jpg",
                 },
           ]
       }
@@ -64,7 +64,7 @@ li {
   display: inline-block;
 }
 
-.container {
+div {
     text-align: center;
     margin-top: 8rem;
 
@@ -75,11 +75,15 @@ li {
         span {
             height: 2px;
             background-color: #f1f1f1;
-            width: calc((100% - 40%)/2 )
+            width: calc((100% - 40%)/2 );
+            margin: 0 2rem;
         }
     }
 
-    .ms-bestseller {
+    .ms-arrivals {
+
+        padding: 2rem 0;
+
         li {
             cursor: pointer;
             margin: auto;
