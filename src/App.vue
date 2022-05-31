@@ -13,6 +13,7 @@
       <NewArrivals />
       <AppReviews />
       <AppBlog />
+      <AppProduct />
       <AppMain />
     </main>
 
@@ -32,8 +33,10 @@ import AppPromo from './components/AppPromo.vue'
 import NewArrivals from './components/NewArrivals.vue'
 import AppReviews from './components/AppReviews.vue'
 import AppBlog from './components/AppBlog.vue'
+import AppProduct from './components/AppProduct.vue'
 import AppMain from './components/AppMain.vue'
 import AppFooter from './components/AppFooter.vue'
+
 
 
 
@@ -55,6 +58,7 @@ export default {
     NewArrivals,
     AppReviews,
     AppBlog,
+    AppProduct,
     AppMain,
     AppFooter,
 }

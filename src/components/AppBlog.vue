@@ -71,6 +71,7 @@ li {
 div {
     text-align: center;
     margin-top: 8rem;
+    padding-bottom: 2rem;
 
     .ms-title {
         h2 {

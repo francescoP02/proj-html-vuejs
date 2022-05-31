@@ -2,9 +2,9 @@
   <div class="ms-container">
       <div class="ms-review" v-for="(item,index) in review" :key="index" :class="{active : index === currentItem}">
 
-      <img :src="require(`../assets/img/${item.img}`)" alt="">
-      <span>{{item.review}}</span>
-      <span>{{item.name}}, Theme Fusion</span>
+        <img :src="require(`../assets/img/${item.img}`)" alt="">
+        <span>{{item.review}}</span>
+        <span>{{item.name}}, Theme Fusion</span>
       </div>
 
       <div class="form-check form-check-inline">
@@ -68,8 +68,13 @@ export default {
     margin: 0 auto;
     padding-bottom: 2rem;
 
+    img {
+      margin: 3rem 0 1rem;
+    }
+
     span {
       display: block;
+      padding: 1rem 0;
     }
   }
 
