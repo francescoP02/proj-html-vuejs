@@ -9,11 +9,11 @@
 
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="0" checked="checked" @click="clickedItem(0)">
-        <label class="form-check-label" for="inlineRadio1">1</label>
+        <label class="form-check-label" for="inlineRadio1"></label>
       </div>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="1" @click="clickedItem(1)">
-        <label class="form-check-label" for="inlineRadio2">2</label>
+        <label class="form-check-label" for="inlineRadio2"></label>
       </div>
 
   </div>

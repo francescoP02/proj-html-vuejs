@@ -182,7 +182,7 @@ li {
 
 .ms-product {
     border-top: 2px solid #f1f1f1;
-    padding-top: 4rem;
+    padding: 4rem 0;
 
     .ms-list-products {
 

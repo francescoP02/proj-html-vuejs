@@ -14,7 +14,7 @@
       <AppReviews />
       <AppBlog />
       <AppProduct />
-      <AppMain />
+      <AppBrand />
     </main>
 
     <footer>
@@ -34,16 +34,8 @@ import NewArrivals from './components/NewArrivals.vue'
 import AppReviews from './components/AppReviews.vue'
 import AppBlog from './components/AppBlog.vue'
 import AppProduct from './components/AppProduct.vue'
-import AppMain from './components/AppMain.vue'
+import AppBrand from './components/AppBrand.vue'
 import AppFooter from './components/AppFooter.vue'
-
-
-
-
-
-
-
-
 
 
 export default {
@@ -59,8 +51,9 @@ export default {
     AppReviews,
     AppBlog,
     AppProduct,
-    AppMain,
+    AppBrand,
     AppFooter,
+
 }
 }
 </script>
