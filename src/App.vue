@@ -9,6 +9,7 @@
       <FeaturedProducts />
       <AppCollection />
       <BestSeller />
+      <AppPromo />
       <AppMain />
     </main>
 
@@ -24,6 +25,7 @@ import AppJumbo from './components/AppJumbo.vue'
 import FeaturedProducts from './components/FeaturedProducts.vue'
 import AppCollection from './components/AppCollection.vue'
 import BestSeller from './components/BestSeller.vue'
+import AppPromo from './components/AppPromo.vue'
 import AppMain from './components/AppMain.vue'
 import AppFooter from './components/AppFooter.vue'
 
@@ -40,9 +42,9 @@ export default {
     FeaturedProducts,
     AppCollection,
     BestSeller,
+    AppPromo,
     AppMain,
     AppFooter,
-
 }
 }
 </script>
