@@ -10,13 +10,17 @@
           <li v-for="(item, index) in featuredMenu" :key="index" @click="clickedItem(index)" :class="{active : index === currentItem}"> {{item.name}}</li>
       </ul>
 
-      <ul class="d-flex row row-cols-4">
-        <li class="ms-featured" v-for="(item, index) in featuredCard" :key="index">
-            <ul class="ms-card">
-                <li><img :src="require(`../assets/img/${item.img}`)" alt=""></li>
-                <li><h5>{{item.name}}</h5></li>
-                <li><span class="ms-genre"> {{item.genre}} </span></li>
-                <li><span class="ms-original-price" v-if="item.original_price !== ''  ">{{item.original_price}}</span> <span class="ms-price">{{item.price}}</span></li>
+      <ul class="ms-card row row-cols-4">
+        <li class="ms-featured" v-for="(item, index) in products" :key="index" :class="{ms_none : item.featured_men === false}">
+            <ul v-if="item.featured_men === true" class="ms-card">
+                <li>
+                    <div>
+                        <img :src="require(`../assets/img/${item.img_big}`)" alt="">
+                        <h5>{{item.name}}</h5>
+                        <span class="ms-genre"> {{item.genre}} </span>
+                        <span class="ms-original-price" v-if="item.original_price !== ''  ">{{item.original_price}}</span> <span class="ms-price">{{item.price}}</span>
+                    </div>
+                </li>
             </ul>
         </li>
       </ul>
@@ -27,6 +31,9 @@
 
 export default {
   name: 'FeaturedProducts',
+  props: {
+      products: Array,
+  },
   data: function() {
     return {
         currentItem: 0,
@@ -44,36 +51,6 @@ export default {
                 active: false,
             },
         ],
-        featuredCard: [
-            {
-                img: "black_elegant_leather_jacket.jpg",
-                name: "Black Leather Jacket",
-                genre: "Men, Jackets, Jeans",
-                original_price: "$235",
-                price: "$200",
-            },
-            {
-                img: "black_leather_suit.jpg",
-                name: "Black Leather Suit",
-                genre: "Men, Jackets",
-                original_price: "",
-                price: "$176",
-            },
-            {
-                img: "blue_jacket_and_white_stripe_tee.jpg",
-                name: "Blue Jacket & Stripe Tee",
-                genre: "Men, Jackets, Suits",
-                original_price: "",
-                price: "$580",
-            },
-            {
-                img: "modern_black_leather_suit.jpg",
-                name: "Modern Black Leather Suit",
-                genre: "Men, Jackets",
-                original_price: "",
-                price: "$96",
-            },
-        ]
     };
   },
 
@@ -100,6 +77,7 @@ li {
 .container {
     text-align: center;
     margin-top: 8rem;
+    margin-bottom: 8rem;
 
     .ms-title {
         h2 {
@@ -125,27 +103,37 @@ li {
         }
     }
 
+    .ms_none {
+        display: none;
+    }
+
     .ms-card {
         li {
-            display: block;
-            margin-top: .3rem;
-            text-align: left;
 
-            img {
-                width: 100%;
-            }
+            div {
+                text-align: left;
 
-            .ms-genre {
-                color: #383e3f;
-            }
+                h5 {
+                    margin-top: .3rem;
+                }
 
-            .ms-original-price {
-                color: #5a98d8;
-                text-decoration: line-through;
-            }
+                img {
+                    width: 100%;
+                }
 
-            .ms-price {
-                color: #5a98d8;
+                .ms-genre {
+                    color: #383e3f;
+                }
+
+                .ms-original-price {
+                    color: #5a98d8;
+                    text-decoration: line-through;
+                }
+
+                .ms-price {
+                    color: #5a98d8;
+                }
+
             }
         }
     }

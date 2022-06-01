@@ -6,7 +6,7 @@
 
     <main>
       <AppJumbo />
-      <FeaturedProducts />
+      <FeaturedProducts :products="products" />
       <AppCollection />
       <BestSeller />
       <AppPromo />
@@ -90,18 +90,21 @@ export default {
                 sale: false,
                 top: false,
                 reviews: false,
+                featured_men: false,
             },
             {
                 name: "Black Leather Jacket",
                 original_price: "$235",
                 price: "$200",
                 img: "black_elegant_leather_jacket-120x156.jpg",
+                img_big: "black_elegant_leather_jacket.jpg",
                 featured: true,
                 sale: true,
                 top: true,
                 reviews: true,
                 review: 5,
                 user_review: "by admin",
+                featured_men: true,
             },
             {
                 name: "Hipster Black Top",
@@ -111,6 +114,7 @@ export default {
                 sale: false,
                 top: false,
                 reviews: false,
+                featured_men: false,
             },
             {
                 name: "Blue Leather Jacket",
@@ -121,6 +125,7 @@ export default {
                 sale: true,
                 top: false,
                 reviews: false,
+                featured_men: false,
             },
             {
                 name: "Modern Leather Boots",
@@ -131,6 +136,7 @@ export default {
                 sale: true,
                 top: false,
                 reviews: false,
+                featured_men: false,
             },
             {
                 name: "Leather Gloves",
@@ -143,6 +149,7 @@ export default {
                 reviews: true,
                 review: 5,
                 user_review: "by Beardman",
+                featured_men: false,
             },
             {
                 name: "Spring Printed Dress",
@@ -155,6 +162,31 @@ export default {
                 reviews: true,
                 review: 5,
                 user_review: "by admin",
+                featured_men: false,
+            },
+            {
+                img_big: "black_leather_suit.jpg",
+                name: "Black Leather Suit",
+                genre: "Men, Jackets",
+                original_price: "",
+                price: "$176",
+                featured_men: true,
+            },
+            {
+                img_big: "blue_jacket_and_white_stripe_tee.jpg",
+                name: "Blue Jacket & Stripe Tee",
+                genre: "Men, Jackets, Suits",
+                original_price: "",
+                price: "$580",
+                featured_men: true,
+            },
+            {
+                img_big: "modern_black_leather_suit.jpg",
+                name: "Modern Black Leather Suit",
+                genre: "Men, Jackets",
+                original_price: "",
+                price: "$96",
+                featured_men: true,
             },
         ]
     }
