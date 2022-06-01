@@ -177,8 +177,9 @@ li {
   color: #ffffff;
 
   .ms-col {
-
+    margin-bottom: 0;
     padding-top: 3rem;
+    padding-bottom: 1rem;
 
     ul {
       padding-left: 0;

@@ -20,6 +20,7 @@
     <footer>
       <AppSubscribe />
       <AppFooter :iconSocial="iconSocial" :products="products" />
+      <AppFooterBottom />
     </footer>
   </div>
 </template>
@@ -38,6 +39,7 @@ import AppProduct from './components/AppProduct.vue'
 import AppBrand from './components/AppBrand.vue'
 import AppSubscribe from './components/AppSubscribe.vue'
 import AppFooter from './components/AppFooter.vue'
+import AppFooterBottom from './components/AppFooterBottom.vue'
 
 
 
@@ -57,7 +59,8 @@ export default {
     AppBrand,
     AppSubscribe,
     AppFooter,
-  },
+    AppFooterBottom,
+},
   data: function() {
     return {
         iconSocial: [
