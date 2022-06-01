@@ -35,28 +35,13 @@
 
 export default {
   name: 'AppHeader',
+  props: {
+    iconSocial: Array,
+  },
   data: function() {
     return {
       currentItem: 0,
       currentNavItem: 0,
-      iconSocial: [
-        {
-          name: "Facebook",
-          icon: "fa-facebook-f",
-        },
-        {
-          name: "Twitter",
-          icon: "fa-twitter",
-        },
-        {
-          name: "Instragram",
-          icon: "fa-instagram",
-        },
-        {
-          name: "Youtube",
-          icon: "fa-youtube",
-        },
-      ],
 
       menuBar: [
         {

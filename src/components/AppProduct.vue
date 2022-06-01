@@ -85,86 +85,9 @@
 
 export default {
   name: 'AppProduct',
-  data: function() {
-      return {
-          products: [
-              {
-                  name: "Black Jacket",
-                  price: "$125",
-                  img: "black_leather_jacket-120x156.jpg",
-                  featured: true,
-                  sale: false,
-                  top: false,
-                  reviews: false,
-              },
-              {
-                  name: "Black Leather Jacket",
-                  original_price: "$235",
-                  price: "$200",
-                  img: "black_elegant_leather_jacket-120x156.jpg",
-                  featured: true,
-                  sale: true,
-                  top: true,
-                  reviews: true,
-                  review: 5,
-                  user_review: "by admin",
-              },
-              {
-                  name: "Hipster Black Top",
-                  price: "$57",
-                  img: "hipster_black_top-120x156.jpg",
-                  featured: true,
-                  sale: false,
-                  top: false,
-                  reviews: false,
-              },
-              {
-                  name: "Blue Leather Jacket",
-                  original_price: "$80",
-                  price: "$60",
-                  img: "blue_leather_jacket-120x156.jpg",
-                  featured: false,
-                  sale: true,
-                  top: false,
-                  reviews: false,
-              },
-              {
-                  name: "Modern Leather Boots",
-                  original_price: "$50",
-                  price: "$30",
-                  img: "modern_leather_boots-120x156.jpg",
-                  featured: false,
-                  sale: true,
-                  top: false,
-                  reviews: false,
-              },
-              {
-                  name: "Leather Gloves",
-                  original_price: "",
-                  price: "$45",
-                  img: "leather_gloves-120x156.jpg",
-                  featured: false,
-                  sale: false,
-                  top: true,
-                  reviews: true,
-                  review: 5,
-                  user_review: "by Beardman",
-              },
-              {
-                  name: "Spring Printed Dress",
-                  original_price: "",
-                  price: "$47",
-                  img: "spring_printed_dress-120x156.jpg",
-                  featured: false,
-                  sale: false,
-                  top: true,
-                  reviews: true,
-                  review: 5,
-                  user_review: "by admin",
-              },
-          ]
-      }
-  },
+  props: {
+      products: Array,
+    },
 }
 </script>
 
