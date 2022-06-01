@@ -18,6 +18,7 @@
     </main>
 
     <footer>
+      <AppSubscribe />
       <AppFooter />
     </footer>
   </div>
@@ -35,7 +36,9 @@ import AppReviews from './components/AppReviews.vue'
 import AppBlog from './components/AppBlog.vue'
 import AppProduct from './components/AppProduct.vue'
 import AppBrand from './components/AppBrand.vue'
+import AppSubscribe from './components/AppSubscribe.vue'
 import AppFooter from './components/AppFooter.vue'
+
 
 
 export default {
@@ -52,8 +55,8 @@ export default {
     AppBlog,
     AppProduct,
     AppBrand,
+    AppSubscribe,
     AppFooter,
-
 }
 }
 </script>
