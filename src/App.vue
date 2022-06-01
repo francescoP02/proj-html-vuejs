@@ -10,7 +10,7 @@
       <AppCollection />
       <BestSeller :products="products" />
       <AppPromo />
-      <NewArrivals />
+      <NewArrivals :products="products"/>
       <AppReviews />
       <AppBlog />
       <AppProduct :products="products" />
@@ -93,6 +93,7 @@ export default {
                 reviews: false,
                 featured_men: false,
                 best_seller: true,
+                new_arrivals: false,
             },
             {
                 name: "Black Leather Jacket",
@@ -108,6 +109,7 @@ export default {
                 user_review: "by admin",
                 featured_men: true,
                 best_seller: true,
+                new_arrivals: true,
             },
             {
                 name: "Hipster Black Top",
@@ -120,6 +122,7 @@ export default {
                 reviews: false,
                 featured_men: false,
                 best_seller: true,
+                new_arrivals: true,
             },
             {
                 name: "Blue Leather Jacket",
@@ -132,6 +135,7 @@ export default {
                 reviews: false,
                 featured_men: false,
                 best_seller: false,
+                new_arrivals: false,
             },
             {
                 name: "Modern Leather Boots",
@@ -144,6 +148,7 @@ export default {
                 reviews: false,
                 featured_men: false,
                 best_seller: false,
+                new_arrivals: false,
             },
             {
                 name: "Leather Gloves",
@@ -158,6 +163,7 @@ export default {
                 user_review: "by Beardman",
                 featured_men: false,
                 best_seller: false,
+                new_arrivals: false,
             },
             {
                 name: "Spring Printed Dress",
@@ -173,6 +179,7 @@ export default {
                 user_review: "by admin",
                 featured_men: false,
                 best_seller: true,
+                new_arrivals: true,
             },
             {
                 img_big: "black_leather_suit.jpg",
@@ -182,6 +189,7 @@ export default {
                 price: "$176",
                 featured_men: true,
                 best_seller: false,
+                new_arrivals: true,
             },
             {
                 img_big: "blue_jacket_and_white_stripe_tee.jpg",
@@ -190,7 +198,8 @@ export default {
                 original_price: "",
                 price: "$580",
                 featured_men: true,
-                best_seller: false
+                best_seller: false,
+                new_arrivals: false,
             },
             {
                 img_big: "modern_black_leather_suit.jpg",
@@ -199,11 +208,13 @@ export default {
                 original_price: "",
                 price: "$96",
                 featured_men: true,
-                best_seller: false
+                best_seller: false,
+                new_arrivals: false,
             },
             {
               img_big: "modern_love_tee.jpg",
               best_seller: true,
+              new_arrivals: true,
             },
         ]
     }

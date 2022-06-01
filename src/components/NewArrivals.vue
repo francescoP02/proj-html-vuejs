@@ -11,9 +11,9 @@
           <li><span><i class="fas fa-angle-left"></i></span></li>
           <li>
             <ul class="d-flex row row-cols-5">
-                <li v-for="(item, index) in newArrivals" :key="index">
-                    <ul class="ms-card d-flex">
-                        <li><img :src="require(`../assets/img/${item.img}`)" alt=""></li>
+                <li v-for="(item, index) in products" :key="index" :class="{ms_none : item.new_arrivals === false}">
+                    <ul class="ms-card d-flex" v-if="item.new_arrivals === true">
+                        <li><img :src="require(`../assets/img/${item.img_big}`)" alt=""></li>
                     </ul>
                 </li>
             </ul>
@@ -28,27 +28,9 @@
 
 export default {
   name: 'NewArrivals',
-  data: function() {
-      return {
-          newArrivals: [
-                {
-                  img: "black_elegant_leather_jacket.jpg",
-                },
-                {
-                  img: "hipster_black_top.jpg",
-                },
-                {
-                  img: "black_leather_suit.jpg",
-                },
-                {
-                  img: "spring_printed_dress.jpg",
-                },
-                {
-                  img: "modern_love_tee.jpg",
-                },
-          ]
-      }
-  },
+  props: {
+    products: Array,
+  }
 }
 </script>
 
@@ -92,6 +74,10 @@ div {
                 color: white;
                 background-color: #c1c1c1;
                 padding: 1rem .3rem;
+            }
+
+            .ms_none {
+              display: none;
             }
         }
         img {
