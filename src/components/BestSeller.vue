@@ -5,15 +5,15 @@
         <h2>Best Seller</h2>
         <span class="align-self-center"></span>
       </div>
-      <span>Must have products from our top sellers</span>
+      <span class="ms-description">Must have products from our top sellers</span>
 
       <ul class="d-flex ms-bestseller">
           <li><span><i class="fas fa-angle-left"></i></span></li>
           <li>
             <ul class="d-flex row row-cols-5">
-                <li v-for="(item, index) in bestSeller" :key="index">
-                    <ul class="ms-card d-flex">
-                        <li><img :src="require(`../assets/img/${item.img}`)" alt=""></li>
+                <li v-for="(item, index) in products" :key="index" :class="{ms_none : item.best_seller === false}">
+                    <ul class="ms-card d-flex" v-if="item.best_seller === true">
+                        <li><img :src="require(`../assets/img/${item.img_big}`)" alt=""></li>
                     </ul>
                 </li>
             </ul>
@@ -28,26 +28,8 @@
 
 export default {
   name: 'BestSeller',
-  data: function() {
-      return {
-          bestSeller: [
-                {
-                  img: "spring_printed_dress.jpg",
-                },
-                {
-                  img: "modern_love_tee.jpg",
-                },
-                {
-                  img: "black_leather_jacket.jpg",
-                },
-                {
-                  img: "black_elegant_leather_jacket.jpg",
-                },
-                {
-                  img: "hipster_black_top.jpg",
-                },
-          ]
-      }
+  props: {
+    products: Array,
   },
 }
 </script>
@@ -75,14 +57,23 @@ li {
         span {
             height: 2px;
             background-color: #f1f1f1;
-            width: calc((100% - 40%)/2 )
+            width: calc((100% - 40%)/2 );
         }
     }
 
     .ms-bestseller {
+
+      padding-top: 4rem;
+
         li {
             cursor: pointer;
             margin: auto;
+
+            ul {
+              .ms_none {
+                display: none;
+              }
+            }
 
             span {
                 color: white;

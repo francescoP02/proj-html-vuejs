@@ -8,7 +8,7 @@
       <AppJumbo />
       <FeaturedProducts :products="products" />
       <AppCollection />
-      <BestSeller />
+      <BestSeller :products="products" />
       <AppPromo />
       <NewArrivals />
       <AppReviews />
@@ -86,11 +86,13 @@ export default {
                 name: "Black Jacket",
                 price: "$125",
                 img: "black_leather_jacket-120x156.jpg",
+                img_big: "black_leather_jacket.jpg",
                 featured: true,
                 sale: false,
                 top: false,
                 reviews: false,
                 featured_men: false,
+                best_seller: true,
             },
             {
                 name: "Black Leather Jacket",
@@ -105,16 +107,19 @@ export default {
                 review: 5,
                 user_review: "by admin",
                 featured_men: true,
+                best_seller: true,
             },
             {
                 name: "Hipster Black Top",
                 price: "$57",
                 img: "hipster_black_top-120x156.jpg",
+                img_big: "hipster_black_top.jpg",
                 featured: true,
                 sale: false,
                 top: false,
                 reviews: false,
                 featured_men: false,
+                best_seller: true,
             },
             {
                 name: "Blue Leather Jacket",
@@ -126,6 +131,7 @@ export default {
                 top: false,
                 reviews: false,
                 featured_men: false,
+                best_seller: false,
             },
             {
                 name: "Modern Leather Boots",
@@ -137,6 +143,7 @@ export default {
                 top: false,
                 reviews: false,
                 featured_men: false,
+                best_seller: false,
             },
             {
                 name: "Leather Gloves",
@@ -150,12 +157,14 @@ export default {
                 review: 5,
                 user_review: "by Beardman",
                 featured_men: false,
+                best_seller: false,
             },
             {
                 name: "Spring Printed Dress",
                 original_price: "",
                 price: "$47",
                 img: "spring_printed_dress-120x156.jpg",
+                img_big: "spring_printed_dress.jpg",
                 featured: false,
                 sale: false,
                 top: true,
@@ -163,6 +172,7 @@ export default {
                 review: 5,
                 user_review: "by admin",
                 featured_men: false,
+                best_seller: true,
             },
             {
                 img_big: "black_leather_suit.jpg",
@@ -171,6 +181,7 @@ export default {
                 original_price: "",
                 price: "$176",
                 featured_men: true,
+                best_seller: false,
             },
             {
                 img_big: "blue_jacket_and_white_stripe_tee.jpg",
@@ -179,6 +190,7 @@ export default {
                 original_price: "",
                 price: "$580",
                 featured_men: true,
+                best_seller: false
             },
             {
                 img_big: "modern_black_leather_suit.jpg",
@@ -187,6 +199,11 @@ export default {
                 original_price: "",
                 price: "$96",
                 featured_men: true,
+                best_seller: false
+            },
+            {
+              img_big: "modern_love_tee.jpg",
+              best_seller: true,
             },
         ]
     }
